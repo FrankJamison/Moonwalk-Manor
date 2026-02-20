@@ -1,6 +1,13 @@
-# Moonwalk Manor (2006) — Static Marketing Site
+# Moonwalk Manor
 
-A single-page, static website for **Moonwalk Manor** (a fictional “hotel on the moon” concept). This repo is meant to be opened directly in a browser or served by any simple static file server.
+A single-page, static marketing site for **Moonwalk Manor** (a fictional “hotel on the moon” concept). This repo can be opened directly in a browser, or served by any simple static file server.
+
+## Links
+
+- **Live preview**: https://moonwalkmanor.fcjamison.com/
+- **Local preview (VS Code task default)**: http://moonwalkmanor.localhost/
+
+> Change note: the VS Code **Open in Browser** task now targets `http://moonwalkmanor.localhost/`.
 
 ## What’s in here
 
@@ -28,11 +35,14 @@ Use any static server you like. Examples:
 
 Then open the server URL shown in your terminal.
 
+If you want to keep using the `moonwalkmanor.localhost` hostname, you can typically access the same server via the same port, e.g. `http://moonwalkmanor.localhost:8080/`.
+
 ### VS Code task
 
-This workspace includes a VS Code task named **“Open in Browser”** (see [.vscode/tasks.json](.vscode/tasks.json)). It opens whatever preview URL is configured there.
+This workspace includes a VS Code task named **“Open in Browser”** (see [.vscode/tasks.json](.vscode/tasks.json)).
 
-Note: the actual URL value is intentionally not documented here because it’s machine-specific.
+- Default URL: `http://moonwalkmanor.localhost/`
+- If your local server uses a different host/port, update the task’s URL (for example: `http://localhost:8080/`).
 
 ## Project structure
 
@@ -99,12 +109,12 @@ This script:
    - `-400.jpg`, `-800.jpg`, `-1200.jpg`, `-1600.jpg`, `-2000.jpg`
 5. Sets the `sizes` attribute based on `data-type`:
 
-| data-type | sizes value |
-|---|---|
-| `showcase` | `100vw` |
-| `reason` | `(max-width: 799px) 100vw, 372px` |
-| `feature` | `(max-width: 799px) 100vw, 558px` |
-| `story` | `(max-width: 799px) 100vw, 670px` |
+| data-type  | sizes value                       |
+| ---------- | --------------------------------- |
+| `showcase` | `100vw`                           |
+| `reason`   | `(max-width: 799px) 100vw, 372px` |
+| `feature`  | `(max-width: 799px) 100vw, 558px` |
+| `story`    | `(max-width: 799px) 100vw, 670px` |
 
 If you add new images, make sure you:
 
